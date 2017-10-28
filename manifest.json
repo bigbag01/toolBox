@@ -1,0 +1,14 @@
+{
+	"manifest_version":2,
+	"name": "URL helper",
+	"version": "1.0",
+	"description": "URL辅助处理工具",
+	"browser_action":{
+		"default_icon": "url.ico",
+		"default_title": "URL helper",
+		"default_popup": "popup.html"
+	},
+	"permissions":[
+		"<all_urls>"
+	]
+}

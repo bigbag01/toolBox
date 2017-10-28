@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+	<style>
+		#container{
+			width:260px;
+			padding:20px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color:#f7e1e9;
+			border:1px solid #ffc3d8;
+		}
+		h3{
+			font-family: fantasy;
+		}
+		img{
+			margin-right: auto;
+			margin-left: auto;
+		}
+		b{
+			font-size:larger;
+		}
+		.param{
+			text-align: left;
+		}
+		#new_area{
+			overflow:auto; 
+			max-height: 300px;
+			white-space: pre-line;
+    		word-wrap: break-word;
+		}
+		.list-group-item{
+			display: inline-block;
+			white-space:pre-line;
+			word-wrap:break-word;
+		}
+		button.btn.btn-raised{
+			background-color:rgba(0,0,0,0.89);
+			color:white;
+		}
+		.form-control, .is-focused .form-control {
+		    background-image: linear-gradient(0deg,#cca2b0 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+		}
+		.is-focused [class^=bmd-label]{
+			color:#cca2b0;
+		}
+		::-webkit-scrollbar {  
+		  width: 14px;  
+		  height: 14px;  
+		}  
+		  
+		::-webkit-scrollbar-track,  
+		::-webkit-scrollbar-thumb {  
+		  border-radius: 999px;  
+		  border: 5px solid transparent;  
+		}  
+		  
+		::-webkit-scrollbar-track {  
+		  box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;  
+		}  
+		  
+		::-webkit-scrollbar-thumb {  
+		  min-height: 20px;  
+		  background-clip: content-box;  
+		  box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;  
+		}  
+  
+		::-webkit-scrollbar-corner {  
+		  background: transparent;  
+		}
+	</style>
+</head>
+<body>
+
+<div id="container">
+	<h3 class="display-4">小工具箱</h3>
+	<div class="form-group">
+	    <input type="text" placeholder="请输入内容" class="form-control" id="content" spellcheck="false" style="display: inline-block;padding-right:20px ">
+	    <i id="remove" class="material-icons md-18" style="position: absolute;right: 0px;bottom:8px;cursor: pointer;font-size: 18px;font-weight: 800;color:rgba(0,0,0,0.7)">clear</i>
+	</div>
+	<p>
+		<button id="QR" type="button" class="btn btn-raised btn-sm">生成二维码</button>&nbsp;
+		<button id="params" type="button" class="btn btn-raised btn-sm">获取url中参数</button>
+	</p>
+	<p>
+		<button id="encode" type="button" class="btn btn-raised btn-sm">URI编码</button>&nbsp;
+		<button id="decode" type="button" class="btn btn-raised btn-sm">URI解码</button>
+	</p>
+	<p>
+		<button id="toAscii" type="button" class="btn btn-raised btn-sm">字符转ascii</button>&nbsp;
+		<button id="asciiTo" type="button" class="btn btn-raised btn-sm">ascii转字符</button>
+	</p>
+	<pre id="new_area"></pre>
+</div>
+
+<script src="jquery-3.2.1.slim.min.js" ></script>
+<script src="popper.js"></script>
+<script src="bootstrap-material-design.js"></script>
+<script src="qrcode.min.js"></script>
+<script src="popup.js"></script>	
+</body>
+</html>
